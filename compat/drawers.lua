@@ -1,3 +1,8 @@
+-- before drawers version 20201031 version field did not exist
+-- from then on drawers has on_movenode functions
+if drawers and drawers.version then
+	return
+end
 
 assert(type(drawers.spawn_visuals) == "function")
 
@@ -15,3 +20,4 @@ minetest.register_on_mods_loaded(function()
 		end
 	end
 end)
+
